@@ -15,14 +15,7 @@ def return_home():
     })
 
 # /api/news_articles
-@app.route("/api/news_articles", methods=['GET'])
-def return_news_articles():
-    return jsonify({
-        'message': "Test message"
-    })
-
-
-@app.route('/news_articles_by_tag/<tag>')
+@app.route('/api/news_articles_by_tag/<tag>')
 def get_news_articles_by_tag(tag):
     return Response(db.generate_news_articles(tag), mimetype='text/event-stream')
 
