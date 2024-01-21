@@ -58,6 +58,9 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      borderWidth: {
+        'border': '2px', // Define the custom 'border-border' class
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
