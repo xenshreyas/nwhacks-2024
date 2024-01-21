@@ -1,9 +1,20 @@
-import Cards from '@/components/Cards';
+import React from "react";
+import dynamic from "next/dynamic";
 
-export default function Home() {
+import background from "/public/images/background.png";
+
+const App = dynamic(() => import("./App"), { ssr: false })
+
+const Home: React.FC = () => {
+
+  console.log(background);
+
   return (
     <div className="bg-cover bg-center h-screen" style={{ backgroundImage: "url('/images/background.png')" }}>
-      <Cards />
+      <App />
+      
     </div>
   );
-}
+};
+
+export default Home;

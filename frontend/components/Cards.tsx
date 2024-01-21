@@ -1,19 +1,30 @@
-"use client"
-
 import React, { useEffect, useState } from 'react';
-import { Card } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 const Cards = () => {
-  const news = ['news1', 'news2', 'news3']
+  const news = ['news1', 'news2', 'news3'];
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-      {news.map((news_item, index) => (
-        <Card key={index} style={{ margin: '10px', padding: '20px' }}>
-          <h2 style={{ fontWeight: 'bold' }}>{news_item}</h2>
-        </Card>
-      ))}
-    </div>
+    <Card>
+      <CardHeader>
+        <CardTitle>Major News</CardTitle>
+        <img src="/images/background.png"></img>
+        <CardDescription>Card Description</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>In a quiet forest, sunlight filtered through emerald leaves, casting a gentle glow on the moss-covered ground. A babbling brook murmured nearby, as vibrant butterflies danced in the warm breeze. The air carried the sweet fragrance of wildflowers, creating a serene haven for contemplation. Nature's symphony played softly, inviting peace and tranquility to envelop the enchanted woodland.</p>
+      </CardContent>
+      <CardFooter>
+        <p>Card Footer</p>
+      </CardFooter>
+    </Card>
   );
 };
 
