@@ -1,15 +1,16 @@
-import Cards from '@/components/Cards';
-import Red from '@/components/Red';
-import Green from '@/components/Green';
+import Header from "./Header";
+import NewsList from "./NewsList";
+import news from "./articles_modified.json";
 
-export default function Home() {
+function Home() {
+  console.log(news);
+
   return (
-    <div className="bg-cover bg-center h-screen" style={{ backgroundImage: "url('/images/background.png')" }}>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-        <Red />
-        <Cards />
-        <Green />
-      </div>
+    <div className="bg-gray-700">
+      <Header />
+      <NewsList news={news} />
     </div>
   );
 }
+
+export default Home;
