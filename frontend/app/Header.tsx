@@ -5,8 +5,9 @@ function Header() {
     <header>
       <div className="grid grid-cols-1 p-10 items-center">
         <Link href="/" prefetch={false}>
-          <h1 className="font-serif text-4xl text-center text-white">
-            The News Nugget
+          <br />
+          <h1 className="font-sans text-5xl text-center text-gray">
+          SNAP 💥 📰 NEWS 💥
           </h1>
         </Link>
       </div>

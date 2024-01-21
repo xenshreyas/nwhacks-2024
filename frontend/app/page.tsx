@@ -6,7 +6,7 @@ function Home() {
   console.log(news);
 
   return (
-    <div className="bg-gray-700">
+    <div style={{ backgroundColor: '#d9ead3' }} className="bg-gray-700">
       <Header />
       <NewsList news={news} />
     </div>
