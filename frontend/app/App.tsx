@@ -1,12 +1,15 @@
-// App.tsx
-
-import React from "react";
+import dynamic from 'next/dynamic';
+import React from 'react';
+import Red from '../components/Red';
+import Green from '../components/Green';
+import Feed from '../components/Feed';
 
 const App: React.FC = () => {
   return (
-    <div>
-      {/* Your component JSX goes here */}
-      <h1>Hello, React!</h1>
+    <div style={{ display: 'flex', minHeight: '100vh', alignItems: 'center' }}>
+      <Red />
+      <Feed />
+      <Green />
     </div>
   );
 };
